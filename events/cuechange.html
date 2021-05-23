@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuechange</title>
+    <style>
+        video {
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" controls>
+        <track src="../tags/video/tracks/subtitle_pt.vtt" label="Português" kind="subtitles" srclang="pt" default oncuechange="debug(event)"></track>
+    </video>
+    <script>
+        function debug(e) {
+            console.log('Event: ' + e.type);
+        }
+    </script>
+</body>
+</html>

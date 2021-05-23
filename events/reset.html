@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset</title>
+</head>
+<body>
+    <form onreset="debug(event)">
+        <input type="text">
+        <input type="reset" value="Reset">
+    </form>
+    <script>
+        function debug(e) {
+            console.log('Event: ' + e.type);
+        }
+    </script>
+</body>
+</html>

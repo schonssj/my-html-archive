@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+</head>
+<body>
+    <details ontoggle="debug(event)">
+        <summary>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur nisi facere nesciunt, enim quibusdam, vero nulla cumque rem doloribus, eligendi mollitia debitis placeat alias animi velit reiciendis commodi laboriosam! Ipsam!</p>
+        </summary>
+    </details>
+    <script>
+        function debug(e) {
+            console.log('Event: ' + e.type);
+        }
+    </script>
+</body>
+</html>

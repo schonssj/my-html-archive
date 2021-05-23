@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error</title>
+</head>
+<body>
+    <img src="images/j.gif" alt="Image" onerror="debug(event)">
+    <video src="naoasokdoosk" onerror="debug(event)"></video>
+    <script>
+        function debug(e) {
+            console.log('Event' + e.type);
+            alert('Event: ' + e.type);
+        }
+    </script>
+</body>
+</html>
