@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropzone</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: chocolate;
+        }
+        .drop {
+            width: 200px;
+            height: 200px;
+            border: crimson 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="b1" class="box" draggable="true"></div>
+    <div id="b2" class="box" draggable="true"></div>
+
+    <div class="drop" dropzone="copy"></div>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const dropzone = document.querySelector('[dropzone]');
+
+        boxes.forEach(box => {
+            box.addEventListener('dragstart', event => {
+                event.dataTransfer.setData('Text', event.target.id);
+                console.log(event.target.id);
+            });
+        });
+
+        dropzone.addEventListener('dragover', event => {
+            event.preventDefault();
+        });
+
+        dropzone.addEventListener('drop', event => {
+            const id = event.dataTransfer.getData('Text');
+            const element = document.getElementById(id);
+            event.target.appendChild(element);
+        });
+    </script>
+</body>
+</html>
