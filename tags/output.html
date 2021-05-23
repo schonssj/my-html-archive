@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+</head>
+<body>
+    <form oninput="z.value = parseInt(x.value) + parseInt(y.value)">
+        <input type="range" id="x" value="0" min="0" max="10">
+        +
+        <input type="number" id="y" value="0">
+        =
+        <output id="z" form="x y">0</output>
+    </form>
+</body>
+</html>
